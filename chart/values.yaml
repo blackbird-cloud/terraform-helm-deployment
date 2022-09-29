@@ -84,3 +84,13 @@ env: []
 envFrom: []
 # - secretRef:
 #     name: mysecret
+
+livenessProbe:
+  httpGet:
+  path: /
+  port: http
+
+readinessProbe:
+  httpGet:
+  path: /
+  port: http
