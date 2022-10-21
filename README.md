@@ -1,5 +1,3 @@
-# terraform-helm-deployment
-
 ## Requirements
 
 | Name | Version |
@@ -27,8 +25,11 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_chart"></a> [chart](#input\_chart) | Chart name, otherwise default helm template will be used | `string` | `""` | no |
+| <a name="input_chart_version"></a> [chart\_version](#input\_chart\_version) | Chart version, required when chart is not empty | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | deployment name | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace to deploy | `string` | n/a | yes |
+| <a name="input_repository"></a> [repository](#input\_repository) | Chart repository url, required when chart is not empty | `string` | `""` | no |
 | <a name="input_values"></a> [values](#input\_values) | List YAML encoded values to be passed to chart | `list(string)` | n/a | yes |
 
 ## Outputs
