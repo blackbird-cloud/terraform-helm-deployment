@@ -30,3 +30,12 @@ variable "chart_version" {
   description = "Chart version, required when chart is not empty"
   default     = ""
 }
+
+variable "sensitive_values" {
+  type = list(object({
+    name  = string
+    value = string
+    type  = string
+  }))
+  description = "Sensitive values to be passed to helm chart (will override values)"
+}
