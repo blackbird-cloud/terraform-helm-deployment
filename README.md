@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 [![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
 
 # Helm release Terraform module
@@ -48,7 +49,7 @@ module "helm_release" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.10.1 |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | ~> 2 |
 
 ## Resources
 
@@ -95,3 +96,4 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 ## Copyright
 
 Copyright © 2017-2023 [Blackbird Cloud](https://www.blackbird.cloud)
+<!-- END_TF_DOCS -->
