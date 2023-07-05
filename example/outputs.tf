@@ -1,4 +1,4 @@
 output "helm_release" {
-  value       = helm_release.deployment
+  value       = module.helm_release.helm_release
   description = "The installed Helm release."
 }
