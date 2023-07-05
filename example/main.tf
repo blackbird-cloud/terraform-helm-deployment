@@ -7,9 +7,8 @@ provider "helm" {
 }
 
 module "helm_release" {
-  #   source  = "blackbird-cloud/deployment/helm"
-  #   version = "~> 1"
-  source = "../"
+  source  = "blackbird-cloud/deployment/helm"
+  version = ">= 1.1.2"
 
   name        = "my-app"
   description = "my-app!"
