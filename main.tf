@@ -4,7 +4,7 @@ resource "helm_release" "deployment" {
   namespace   = var.namespace
 
   repository = var.repository
-  chart      = var.chart
+  chart      = try(var.chart, "${path.module}/chart")
   version    = var.chart_version
 
   create_namespace = var.create_namespace
