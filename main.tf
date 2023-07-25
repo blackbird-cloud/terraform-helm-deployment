@@ -1,10 +1,14 @@
+locals {
+  chart = var.chart == "" ? "${path.module}/chart" : var.chart
+}
+
 resource "helm_release" "deployment" {
   name        = var.name
   description = var.description
   namespace   = var.namespace
 
   repository = var.repository
-  chart      = try(var.chart, "${path.module}/chart")
+  chart      = local.chart
   version    = var.chart_version
 
   create_namespace = var.create_namespace
