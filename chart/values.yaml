@@ -100,3 +100,7 @@ pdb:
   enabled: true
   minAvailable: 1
   # maxUnavailable:
+
+job:
+  enabled: false
+  annotations: {}
