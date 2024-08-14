@@ -104,3 +104,5 @@ pdb:
 job:
   enabled: false
   annotations: {}
+  # args: []
+  # command: []
