@@ -1,8 +1,8 @@
 <!-- BEGIN_TF_DOCS -->
-[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
+# Terraform Helm Deployment Module
+Helpers to quickly deploy helm charts on Kubernetes cluster
 
-# Helm release Terraform module
-A Terraform module which configures your Helm release. You can find more information at [this](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) page.
+[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://blackbird.cloud)
 
 ## Example
 ```hcl
@@ -16,7 +16,7 @@ provider "helm" {
 
 module "helm_release" {
   source  = "blackbird-cloud/deployment/helm"
-  version = ">= 1.1.2"
+  version = "1.2.1"
 
   name        = "my-app"
   description = "my-app!"
@@ -62,7 +62,7 @@ module "helm_release" {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_atomic"></a> [atomic](#input\_atomic) | If set, installation process purges chart on fail. The wait flag will be set automatically if atomic is used. Defaults to false. | `bool` | `false` | no |
-| <a name="input_chart"></a> [chart](#input\_chart) | Chart name to be installed. The chart name can be local path, a URL to a chart, or the name of the chart if repository is specified. It is also possible to use the <repository>/<chart> format here if you are running Terraform on a system that the repository has been added to with helm repo add but this is not recommended. Defaults to the local chart in this module. | `string` | `null` | no |
+| <a name="input_chart"></a> [chart](#input\_chart) | Chart name to be installed. The chart name can be local path, a URL to a chart, or the name of the chart if repository is specified. It is also possible to use the <repository>/<chart> format here if you are running Terraform on a system that the repository has been added to with helm repo add but this is not recommended. Defaults to the local chart in this module. | `string` | `""` | no |
 | <a name="input_chart_version"></a> [chart\_version](#input\_chart\_version) | Specify the exact chart version to install. If this is not specified, the latest version is installed. helm\_release will not automatically grab the latest release, version must explicitly upgraded when upgrading an installed chart. | `string` | `null` | no |
 | <a name="input_cleanup_on_fail"></a> [cleanup\_on\_fail](#input\_cleanup\_on\_fail) | Allow deletion of new resources created in this upgrade when upgrade fails. Defaults to true. | `bool` | `false` | no |
 | <a name="input_create_namespace"></a> [create\_namespace](#input\_create\_namespace) | Create the namespace if it does not yet exist. Defaults to false. | `bool` | `false` | no |
@@ -95,5 +95,5 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 
 ## Copyright
 
-Copyright © 2017-2023 [Blackbird Cloud](https://www.blackbird.cloud)
+Copyright © 2017-2024 [Blackbird Cloud](https://blackbird.cloud)
 <!-- END_TF_DOCS -->
