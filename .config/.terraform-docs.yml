@@ -14,10 +14,9 @@ sections:
     - modules
 
 content: |-
-  {{ .Header }}
+  {{ include "./.config/title.md"}}
 
-  # Helm release Terraform module
-  A Terraform module which configures your Helm release. You can find more information at [this](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) page.
+  {{ .Header }}
 
   ## Example
   ```hcl
